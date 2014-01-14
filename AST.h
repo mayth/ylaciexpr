@@ -7,18 +7,7 @@
 #include "list.h"
 
 typedef struct AST_ AST;
-typedef enum TokenType_ TokenType;
 typedef enum code_ CodeType;
-
-enum TokenType_ {
-    TKN_NUMBER,
-    TKN_PLUS,
-    TKN_MINUS,
-    TKN_ASTERISK,
-    TKN_SLASH,
-    TKN_LEFT_PAREN,
-    TKN_RIGHT_PAREN
-};
 
 enum code_ {
     ETC_LIST,
@@ -88,3 +77,5 @@ extern AST *Root;
 #define AST_symbol un.symbol.symbol
 
 #endif
+
+/* vim: set et ts=4 sts=4 sw=4: */
