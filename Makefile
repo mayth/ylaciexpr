@@ -15,10 +15,10 @@ ylaciexpr: expr.o AST.o trie.o list.o interpreter.c
 test-components: list-test trie-test
 
 list-test: list.o list_test.c
-	$(CC) $(CFLAGS) -o list_test list.o list_test.c
+	$(CC) $(CFLAGS) -o list-test list.o list_test.c
 
 trie-test: trie.o trie_test.c
-	$(CC) $(CFLAGS) -o trie_test trie.o trie_test.c
+	$(CC) $(CFLAGS) -o trie-test trie.o trie_test.c
 
 all: $(PROG)
 
