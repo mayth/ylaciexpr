@@ -44,5 +44,3 @@ expression: expression '+' expression { $$ = AST_makeBinary(OP_ADD, $1, $3); }
 %%
 
 #include "lexer.c"
-
-#include "interpreter.c"

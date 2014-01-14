@@ -1,11 +1,16 @@
-extern int yydebug;
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+#include "list.h"
+#include "AST.h"
 
+int yyparse();
 void executeProgram(const AST *ast);
 
 bool iter_executeStmt(unsigned long i, const void *v);
 
 int main() {
-    yydebug = 0;
     SymbolTable = trie_new();
     int result = yyparse();
     executeProgram(Root);
